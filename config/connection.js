@@ -18,7 +18,6 @@ const sequelize = process.env.JAWSDB_URL
           rejectUnauthorized: false
         }
       },
-      port: process.env.PORT || 8889
     });
     
     sequelize
