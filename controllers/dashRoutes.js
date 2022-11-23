@@ -4,7 +4,6 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/dash', withAuth, (req, res) => {
-  console.log('Dash route')
     Post.findAll({
       where: {
         // use the ID from the session

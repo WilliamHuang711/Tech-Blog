@@ -4,10 +4,13 @@ const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes.js');
 const dashRoutes = require('./dashRoutes.js');
 
-
+const handlebars = [
+  homeRoutes,
+  dashRoutes,
+]
+router.use('/', handlebars);
 router.use('/api', apiRoutes);
-router.use('/', homeRoutes);
-router.use('/dash', dashRoutes);
+
 
 
 router.use((req, res) => {
